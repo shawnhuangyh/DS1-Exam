@@ -3,4 +3,4 @@ project(Virus_Variants)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Virus_Variants main.cpp)
+add_executable(Virus_Variants main.cpp DisjointSet.h Graph.h)
