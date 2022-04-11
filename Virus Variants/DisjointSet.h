@@ -32,7 +32,7 @@ public:
 
     void Union(int i, int j);
 
-    void Test();
+    int GetCount();
 
 };
 
@@ -99,24 +99,28 @@ int DisjointSet<T>::FindRootHelper(int i) {
 
 template<typename T>
 void DisjointSet<T>::Union(int i, int j) {
-    if (i <= 0 || i > size || j <= 0 || j > size || i == j) {
+    if (i <= 0 || i > size || j <= 0 || j > size) {
         cout << "Range Error!" << endl;
         return;
     }
     int root_i = FindRoot(i);
     int root_j = FindRoot(j);
-    if(root_i >= 0 && root_j >= 0){
+    if (root_i >= 0 && root_j >= 0 && root_i != root_j) {
         sets[root_i] += sets[root_j];
         sets[root_j] = root_i;
     }
 }
 
 template<typename T>
-void DisjointSet<T>::Test() {
+int DisjointSet<T>::GetCount() {
+    int count = 0;
     for (int i = 0; i < size; ++i) {
-        cout << i << " : " << sets[i] << endl;
+        if (sets[i] < 0)
+            count++;
     }
+    return count;
 }
+
 
 
 #endif //VIRUS_VARIANTS_DISJOINTSET_H
