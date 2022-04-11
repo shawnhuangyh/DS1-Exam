@@ -28,8 +28,6 @@ public:
 
     void FindArc(int v, int w, DisjointSet<T> &set);
 
-    void Test();
-
 };
 
 template<typename T>
@@ -114,16 +112,6 @@ void Graph<T>::FindArc(int v, int w, DisjointSet<T> &set) {
     }
 }
 
-template<typename T>
-void Graph<T>::Test() {
-    for (int i = 0; i < vexNum; ++i) {
-        for (int j = 0; j < vexNum; ++j) {
-            cout << arcs[i][j] << " ";
-        }
-        cout << endl;
-    }
-
-}
 
 
 #endif //VIRUS_VARIANTS_GRAPH_H
