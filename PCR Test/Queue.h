@@ -35,6 +35,8 @@ public:
 
     bool IsFull();
 
+    void ShowQueue();
+
 };
 
 template<typename T>
@@ -117,6 +119,16 @@ bool Queue<T>::IsEmpty() {
 template<typename T>
 bool Queue<T>::IsFull() {
     return (rear + 1) % capacity == front;
+}
+
+template<typename T>
+void Queue<T>::ShowQueue() {
+    int r = rear, f = front;
+    while((r + 1) % capacity != f){
+        cout << elems[f] << " ";
+        f = (f + 1) % capacity;
+    }
+    cout << endl;
 }
 
 
