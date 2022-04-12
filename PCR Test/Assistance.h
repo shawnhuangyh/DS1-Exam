@@ -9,6 +9,9 @@
 #include <iostream>
 #include <string>
 #include "Queue.h"
+#include "LinkList.h"
+#include "DataBase.h"
+#include "PCRTest.h"
 
 using namespace std;
 
@@ -17,10 +20,6 @@ string GetBuildingNo(const string &PersonNo);
 string GetRoomNo(const string &PersonNo);
 
 string GetPersonNo(const string &PersonNo);
-
-void ImportQueueData(Queue<string> &mixed, Queue<string> &single);
-
-void ImportCheckedData(Queue<string> &mixed, Queue<string> &single);
 
 void ShowMenu();
 
