@@ -116,7 +116,7 @@ bool Queue<T>::IsEmpty() {
 
 template<typename T>
 bool Queue<T>::IsFull() {
-    return rear + 1 == capacity;
+    return rear == capacity;
 }
 
 template<typename T>
