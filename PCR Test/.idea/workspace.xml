@@ -11,9 +11,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="chore: init commit for PCR Test">
-      <change beforePath="$PROJECT_DIR$/.idea/PCR Test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PCR Test.iml" afterDir="false" />
+    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="chore: add circular queue">
+      <change afterPath="$PROJECT_DIR$/Assistance.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assistance.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Cases/Queue.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Cases/TestProgress.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +33,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -36,7 +50,9 @@
     <option name="minorVersion" value="3.4" />
   </component>
   <component name="ProjectId" id="27eOAESfKlZqaxgQZKdA8X84XZi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,14 +65,24 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cmake-build-debug" />
+    <property name="structure.view.defaults.are.configured" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmake-build-debug" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Test Cases" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="PCR_Test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PCR_Test" TARGET_NAME="PCR_Test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PCR_Test" RUN_TARGET_NAME="PCR_Test">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PCR_Test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PCR_Test" TARGET_NAME="PCR_Test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PCR_Test" RUN_TARGET_NAME="PCR_Test">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -70,7 +96,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649676940071</updated>
-      <workItem from="1649676941302" duration="494000" />
+      <workItem from="1649676941302" duration="15040000" />
+      <workItem from="1649732218668" duration="4443000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit for PCR Test">
       <created>1649676965644</created>
@@ -79,7 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649676965644</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="chore: init commit for PCR Test">
+      <created>1649686708719</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649686708719</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: add circular queue">
+      <created>1649721583572</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649721583572</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: init commit for PCR Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: init commit for PCR Test" />
+    <MESSAGE value="chore: add circular queue" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add circular queue" />
   </component>
 </project>
