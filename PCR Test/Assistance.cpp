@@ -19,7 +19,7 @@ string GetPersonNo(const string &PersonNo) {
 void ShowMenu() {
     cout << "========核酸检测系统========" << endl;
     cout << "1. 排队" << endl;
-    cout << "2. 检测" << endl;
+    cout << "2. 采样" << endl;
     cout << "3. 查看排队" << endl;
     cout << "4. 登记测试管" << endl;
     cout << "5. 各类人员查询" << endl;

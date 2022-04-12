@@ -15,6 +15,11 @@ class PCRTest {
 private:
     Queue<string> mixed, single;
     int mixed_count, single_count;
+
+    void EnQueue(const string &elem, int select);
+
+    void DeQueue(string &elem, int select);
+
 public:
     PCRTest();
 
@@ -23,6 +28,8 @@ public:
     void ImportCheckedData();
 
     void EnQueue();
+
+    void DeQueue();
 
     void ShowQueue();
 };
