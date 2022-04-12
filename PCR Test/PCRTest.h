@@ -6,6 +6,7 @@
 #define PCR_TEST_PCRTEST_H
 
 #include <fstream>
+#include "Person.h"
 #include "Queue.h"
 #include "DataBase.h"
 
@@ -13,7 +14,7 @@ using namespace std;
 
 class PCRTest {
 private:
-    Queue<string> mixed, single;
+    Queue<Person> mixed, single;
     int mixed_count, single_count;
 
     void EnQueue(const string &elem, int select);

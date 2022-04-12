@@ -45,9 +45,11 @@ void PCRTest::ImportCheckedData() {
 
 void PCRTest::EnQueue(const string &elem, int select) {
     if (select == 0) {
-        mixed.EnQueue(elem);
+        Person temp(elem);
+        mixed.EnQueue(temp);
     } else {
-        single.EnQueue(elem);
+        Person temp(elem);
+        single.EnQueue(temp);
     }
 }
 
@@ -72,9 +74,15 @@ void PCRTest::EnQueue() {
 
 void PCRTest::DeQueue(string &elem, int select) {
     if (select == 0) {
-        mixed.DeQueue(elem);
+        Person temp;
+        mixed.DeQueue(temp);
+        elem = temp.getPersonID();
+        mixed_count++;
     } else {
-        single.DeQueue(elem);
+        Person temp;
+        single.DeQueue(temp);
+        elem = temp.getPersonID();
+        single_count++;
     }
 }
 

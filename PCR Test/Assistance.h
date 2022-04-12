@@ -15,12 +15,6 @@
 
 using namespace std;
 
-string GetBuildingNo(const string &PersonNo);
-
-string GetRoomNo(const string &PersonNo);
-
-string GetPersonNo(const string &PersonNo);
-
 void ShowMenu();
 
 

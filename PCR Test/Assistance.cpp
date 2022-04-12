@@ -4,18 +4,6 @@
 
 #include "Assistance.h"
 
-string GetBuildingNo(const string &PersonNo) {
-    return PersonNo.substr(0, 3);
-}
-
-string GetRoomNo(const string &PersonNo) {
-    return PersonNo.substr(3, 4);
-}
-
-string GetPersonNo(const string &PersonNo) {
-    return PersonNo.substr(7, 1);
-}
-
 void ShowMenu() {
     cout << "========核酸检测系统========" << endl;
     cout << "1. 排队" << endl;
