@@ -93,8 +93,7 @@ bool Queue<T>::EnQueue(T elem) {
         cout << "Queue is full" << endl;
         return false;
     } else {
-        elems[rear] = elem;
-        rear = (rear + 1) % capacity;
+        elems[rear++] = elem;
         return true;
     }
 }
@@ -105,8 +104,7 @@ bool Queue<T>::DeQueue(T &elem) {
         cout << "Queue is empty" << endl;
         return false;
     } else {
-        elem = elems[front];
-        front = (front + 1) % capacity;
+        elem = elems[front++];
         return true;
     }
 }
@@ -118,15 +116,14 @@ bool Queue<T>::IsEmpty() {
 
 template<typename T>
 bool Queue<T>::IsFull() {
-    return (rear + 1) % capacity == front;
+    return rear + 1 == capacity;
 }
 
 template<typename T>
 void Queue<T>::ShowQueue() {
     int r = rear, f = front;
-    while((r + 1) % capacity != f){
-        cout << elems[f] << " ";
-        f = (f + 1) % capacity;
+    while (f != r) {
+        cout << elems[f++] << " ";
     }
     cout << endl;
 }
