@@ -20,6 +20,10 @@ string GetPersonNo(const string &PersonNo);
 
 void ImportQueueData(Queue<string> &mixed, Queue<string> &single);
 
+void ImportCheckedData(Queue<string> &mixed, Queue<string> &single);
+
+void ShowMenu();
+
 
 
 #endif //PCR_TEST_ASSISTANCE_H

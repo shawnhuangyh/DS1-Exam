@@ -3,4 +3,4 @@ project(PCR_Test)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(PCR_Test main.cpp)
+add_executable(PCR_Test main.cpp Queue.h Assistance.cpp Assistance.h)

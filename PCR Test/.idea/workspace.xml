@@ -11,14 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="chore: add circular queue">
-      <change afterPath="$PROJECT_DIR$/Assistance.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assistance.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test Cases/Queue.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test Cases/TestProgress.txt" afterDir="false" />
+    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="chore: add test case data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Assistance.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assistance.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649676940071</updated>
       <workItem from="1649676941302" duration="15040000" />
-      <workItem from="1649732218668" duration="4443000" />
+      <workItem from="1649732218668" duration="11789000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit for PCR Test">
       <created>1649676965644</created>
@@ -120,7 +117,42 @@
       <option name="project" value="LOCAL" />
       <updated>1649721583572</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add show queue">
+      <created>1649740885925</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649740885925</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: add assistance">
+      <created>1649740916225</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649740916225</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: use regular queue to keep the queue data">
+      <created>1649755799651</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1649755799651</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: fix queue full bug">
+      <created>1649760358919</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1649760358919</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chore: add test case data">
+      <created>1649760377939</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649760377939</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +172,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: init commit for PCR Test" />
     <MESSAGE value="chore: add circular queue" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add circular queue" />
+    <MESSAGE value="feat: add show queue" />
+    <MESSAGE value="feat: add assistance" />
+    <MESSAGE value="fix: use regular queue to keep the queue data" />
+    <MESSAGE value="fix: fix queue full bug" />
+    <MESSAGE value="chore: add test case data" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add test case data" />
   </component>
 </project>
