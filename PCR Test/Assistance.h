@@ -8,14 +8,16 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "Queue.h"
-#include "LinkList.h"
-#include "DataBase.h"
-#include "PCRTest.h"
 
 using namespace std;
 
+enum Contact{CONTACT, SUB_CONTACT, NORMAL};
+
+enum State{Negative, Positive, Suspicious, Pending, InQueue, NotInQueue};
+
 void ShowMenu();
+
+string GenerateSampleNo(int sampleNo, int category);
 
 
 

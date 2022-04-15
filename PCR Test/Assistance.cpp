@@ -16,4 +16,10 @@ void ShowMenu() {
     cout << "请选择(0-6)：" << endl;
 }
 
+string GenerateSampleNo(int sampleNo, int category) {
+    int num = 4;
+    string new_string = to_string(category) + string(num - to_string(sampleNo).length(), '0') + to_string(sampleNo);
+    return new_string;
+}
+
 

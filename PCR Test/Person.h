@@ -6,6 +6,7 @@
 #define PCR_TEST_PERSON_H
 
 #include <iostream>
+#include"Assistance.h"
 
 using namespace std;
 
@@ -14,6 +15,8 @@ class Person {
 private:
     string PersonID;
     string SampleID;
+    State state;
+    Contact contact;
 public:
     Person();
 
@@ -23,11 +26,13 @@ public:
 
     string getSampleID();
 
-    string GetBuildingNo();
+    string getBuildingNo();
 
-    string GetRoomNo();
+    string getRoomNo();
 
-    string GetPersonNo();
+    string getPersonNo();
+
+    void setSampleID(string sid);
 
     friend ostream &operator<<(ostream &out, const Person &p) {
         out << p.PersonID;

@@ -22,15 +22,19 @@ string Person::getSampleID() {
     return SampleID;
 }
 
-string Person::GetBuildingNo() {
+string Person::getBuildingNo() {
     return PersonID.substr(0, 3);
 }
 
-string Person::GetRoomNo() {
+string Person::getRoomNo() {
     return PersonID.substr(3, 4);
 }
 
-string Person::GetPersonNo() {
+string Person::getPersonNo() {
     return PersonID.substr(7, 1);
+}
+
+void Person::setSampleID(string sid) {
+    SampleID = sid;
 }
 
