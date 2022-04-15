@@ -17,7 +17,6 @@ enum State{Negative, Positive, Suspicious, Pending, InQueue, NotInQueue};
 
 void ShowMenu();
 
-string GenerateSampleNo(int sampleNo, int category);
 
 
 

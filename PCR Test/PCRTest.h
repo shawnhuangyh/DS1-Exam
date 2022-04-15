@@ -8,7 +8,6 @@
 #include <fstream>
 #include "Person.h"
 #include "Queue.h"
-#include "DataBase.h"
 
 using namespace std;
 
@@ -33,6 +32,11 @@ public:
     void DeQueue();
 
     void ShowQueue();
+
+    void PerformTest();
+
+    string GetSampleNo(int select);
+    // 选择0为混合队列，选择1为单队列
 };
 
 

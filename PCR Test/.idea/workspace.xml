@@ -11,15 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="feat: use struct in the queue">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assistance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Assistance.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assistance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assistance.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="feat: use enum to mark person status">
       <change beforePath="$PROJECT_DIR$/PCRTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PCRTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Person.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person.h" beforeDir="false" afterPath="$PROJECT_DIR$/Person.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Cases/Checked.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/Checked.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Cases/Queue.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/Queue.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -97,7 +91,7 @@
       <workItem from="1649732218668" duration="31776000" />
       <workItem from="1649987390924" duration="136000" />
       <workItem from="1649987535455" duration="3770000" />
-      <workItem from="1650031613097" duration="1010000" />
+      <workItem from="1650031613097" duration="1223000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit for PCR Test">
       <created>1649676965644</created>
@@ -204,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649778335517</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: use enum to mark person status">
+      <created>1650032723680</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1650032723680</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +236,7 @@
     <MESSAGE value="chore: modify enqueue and dequeue logic" />
     <MESSAGE value="feat: add link list" />
     <MESSAGE value="feat: use struct in the queue" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: use struct in the queue" />
+    <MESSAGE value="feat: use enum to mark person status" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: use enum to mark person status" />
   </component>
 </project>

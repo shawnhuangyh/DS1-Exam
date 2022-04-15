@@ -47,9 +47,11 @@ void PCRTest::EnQueue(const string &elem, int select) {
     if (select == 0) {
         Person temp(elem);
         mixed.EnQueue(temp);
+        mixed_count++;
     } else {
         Person temp(elem);
         single.EnQueue(temp);
+        single_count++;
     }
 }
 
@@ -110,4 +112,24 @@ void PCRTest::ShowQueue() {
     cout << "单人单管检测：" << endl;
     single.ShowQueue();
     cout << endl;
+}
+
+void PCRTest::PerformTest() {
+    string SampleNo;
+    cout << "==========检测登记管==========" << endl;
+    cin >> SampleNo;
+    // TODO Not finished yet
+}
+
+string PCRTest::GetSampleNo(int select) {
+    string output;
+    int num = 4;
+    int sampleNo;
+    if (select == 0) {
+        sampleNo = mixed_count % 10;
+    } else {
+        sampleNo = single_count % 10;
+    }
+    output = to_string(select) + string(num - to_string(sampleNo).length(), '0') + to_string(sampleNo);
+    return output;
 }
