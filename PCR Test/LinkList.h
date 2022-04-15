@@ -21,6 +21,9 @@ public:
     ~LinkList();
 
     void Insert(T data);
+
+    T GetElement(int index);
+
 };
 
 template<typename T>
@@ -31,7 +34,7 @@ LinkList<T>::LinkList() {
 template<typename T>
 LinkList<T>::LinkList(const LinkList<T> &copy) {
     head = nullptr;
-    for (Node<T> i = copy.head; i != nullptr; i = i->next) {
+    for (Node<T> *i = copy.head; i != nullptr; i = i->next) {
         auto *newNode = new Node<T>(i->data, head);
         head = newNode;
     }
@@ -40,7 +43,7 @@ LinkList<T>::LinkList(const LinkList<T> &copy) {
 template<typename T>
 LinkList<T> &LinkList<T>::operator=(const LinkList<T> &copy) {
     if (this != &copy) {
-        Node<T> i = head, p;
+        Node<T> *i = head, *p;
         while (i != nullptr) {
             p = i;
             i = i->next;
@@ -57,7 +60,7 @@ LinkList<T> &LinkList<T>::operator=(const LinkList<T> &copy) {
 
 template<typename T>
 LinkList<T>::~LinkList() {
-    Node<T> i = head, p;
+    Node<T> *i = head, *p;
     while (i != nullptr) {
         p = i;
         i = i->next;
@@ -69,6 +72,15 @@ template<typename T>
 void LinkList<T>::Insert(T data) {
     auto *newNode = new Node<T>(data, head);
     head = newNode;
+}
+
+template<typename T>
+T LinkList<T>::GetElement(int index) {
+    Node<T> *i = head;
+    for (int j = 0; j < index; j++) {
+        i = i->next;
+    }
+    return i->data;
 }
 
 
