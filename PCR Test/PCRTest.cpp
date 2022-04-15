@@ -47,11 +47,9 @@ void PCRTest::EnQueue(const string &elem, int select) {
     if (select == 0) {
         Person temp(elem);
         mixed.EnQueue(temp);
-        mixed_count++;
     } else {
         Person temp(elem);
         single.EnQueue(temp);
-        single_count++;
     }
 }
 
@@ -79,11 +77,15 @@ void PCRTest::DeQueue(string &elem, int select) {
         Person temp;
         mixed.DeQueue(temp);
         elem = temp.getPersonID();
+        string sample = GetSampleNo(0);
+        temp.setSampleID(sample);
         mixed_count++;
     } else {
         Person temp;
         single.DeQueue(temp);
         elem = temp.getPersonID();
+        string sample = GetSampleNo(1);
+        temp.setSampleID(sample);
         single_count++;
     }
 }
@@ -126,9 +128,9 @@ string PCRTest::GetSampleNo(int select) {
     int num = 4;
     int sampleNo;
     if (select == 0) {
-        sampleNo = mixed_count % 10;
+        sampleNo = mixed_count / 10;
     } else {
-        sampleNo = single_count % 10;
+        sampleNo = single_count;
     }
     output = to_string(select) + string(num - to_string(sampleNo).length(), '0') + to_string(sampleNo);
     return output;
