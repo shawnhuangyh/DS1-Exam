@@ -11,9 +11,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="refactor: move function to PCRTest">
+    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="fix: fix link list bug">
+      <change afterPath="$PROJECT_DIR$/Queue.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PCRTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PCRTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +75,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PCR_Test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PCR_Test" TARGET_NAME="PCR_Test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PCR_Test" RUN_TARGET_NAME="PCR_Test">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -89,7 +98,7 @@
       <workItem from="1649732218668" duration="31776000" />
       <workItem from="1649987390924" duration="136000" />
       <workItem from="1649987535455" duration="3770000" />
-      <workItem from="1650031613097" duration="2502000" />
+      <workItem from="1650031613097" duration="7341000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit for PCR Test">
       <created>1649676965644</created>
@@ -217,7 +226,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650033464560</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: add generate sample no">
+      <created>1650034309291</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1650034309291</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix: fix link list bug">
+      <created>1650039350747</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1650039350747</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +274,8 @@
     <MESSAGE value="feat: use enum to mark person status" />
     <MESSAGE value="refactor: shrink the amount of test case" />
     <MESSAGE value="refactor: move function to PCRTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: move function to PCRTest" />
+    <MESSAGE value="feat: add generate sample no" />
+    <MESSAGE value="fix: fix link list bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix link list bug" />
   </component>
 </project>
