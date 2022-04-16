@@ -153,7 +153,7 @@ void PCRTest::PerformTest() {
                 temp = single.FindSample(SampleNo);
                 single.SetPositive(temp);
                 MarkClose(temp);
-                //TODO 寻找次密接
+                MarkSubClose();
                 break;
             case 2:
                 temp = single.FindSample(SampleNo);
@@ -213,6 +213,25 @@ void PCRTest::MarkClose(int pos) {
             single.SetContact(i);
             building = single.GetElem(i).getBuildingNo();
             sub_close.Insert(building);
+        }
+    }
+}
+
+void PCRTest::MarkSubClose() {
+    string building;
+    while (!sub_close.IsEmpty()) {
+        sub_close.Pop(building);
+        // 单管队伍中找次密接
+        for (int i = 0; i < single.GetRear(); i++) {
+            if (single.GetElem(i).getBuildingNo() == building) {
+                single.SetSubContact(i);
+            }
+        }
+        // 混管队伍中找次密接
+        for (int i = 0; i < mixed.GetRear(); i++) {
+            if (mixed.GetElem(i).getBuildingNo() == building) {
+                mixed.SetSubContact(i);
+            }
         }
     }
 }

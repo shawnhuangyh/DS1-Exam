@@ -48,6 +48,8 @@ public:
 
     void MarkClose(int pos);
 
+    void MarkSubClose();
+
     //TODO  按类别查询
 
     void PersonQuery();

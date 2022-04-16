@@ -138,6 +138,11 @@ void Queue::SetContact(int pos) {
     elems[pos].setContact(CONTACT);
 }
 
+void Queue::SetSubContact(int pos) {
+    if (elems[pos].getContact() == NORMAL)
+        elems[pos].setContact(SUB_CONTACT);
+}
+
 Person Queue::GetElem(int pos) {
     return elems[pos];
 }

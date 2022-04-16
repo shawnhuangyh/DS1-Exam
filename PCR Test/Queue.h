@@ -57,6 +57,8 @@ public:
 
     void SetContact(int pos);
 
+    void SetSubContact(int pos);
+
     Person GetElem(int pos);
 
     int GetRear();

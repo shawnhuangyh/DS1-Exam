@@ -22,6 +22,10 @@ public:
 
     void Insert(T data);
 
+    void Pop(T &e);
+
+    bool IsEmpty();
+
     T GetElement(int index);
 
 };
@@ -81,6 +85,19 @@ T LinkList<T>::GetElement(int index) {
         i = i->next;
     }
     return i->data;
+}
+
+template<typename T>
+void LinkList<T>::Pop(T &e) {
+    Node<T> *p = head;
+    e = p->data;
+    head = head->next;
+    delete p;
+}
+
+template<typename T>
+bool LinkList<T>::IsEmpty() {
+    return head == nullptr;
 }
 
 
