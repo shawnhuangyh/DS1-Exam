@@ -290,5 +290,5 @@ void PCRTest::PersonQuery() {
         contact_status = "N/A";
     }
     cout << "个人编号：" << id << endl << "样本编号：" << sample << endl << "核酸检测结果：" << status
-         << endl << "密接结果：" << contact_status << endl;
+         << endl << "密接结果：" << contact_status << endl << endl;
 }
