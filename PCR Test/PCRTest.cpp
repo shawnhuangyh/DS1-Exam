@@ -116,13 +116,14 @@ void PCRTest::PerformTest() {
     string SampleNo;
     int result;
     cout << "==========检测登记管==========" << endl;
-    cout << "请输入采样编号：" << endl;
+    cout << "请输入采样编号：";
     cin >> SampleNo;
     int temp;
     if (SampleNo[0] == '0') {
         if (CheckSampleNo(SampleNo)) {
-            cout << endl << "请输入结果" << endl << "0：阴性 ; 1：阳性 ; 2：可疑" << endl << "请输入(0-2)：";
+            cout << "请输入结果" << endl << "0：阴性 ; 1：阳性 ; 2：可疑" << endl << "请输入(0-2)：";
             cin >> result;
+            cout << endl;
             switch (result) {
                 case 0:
                     temp = mixed.FindSample(SampleNo);
@@ -142,8 +143,9 @@ void PCRTest::PerformTest() {
             return;
         }
     } else {
-        cout << endl << "请输入结果" << endl << "0：阴性 ; 1：阳性 ; 2：可疑" << endl << "请输入(0-2)：";
+        cout << "请输入结果" << endl << "0：阴性 ; 1：阳性 ; 2：可疑" << endl << "请输入(0-2)：";
         cin >> result;
+        cout << endl;
         switch (result) {
             case 0:
                 temp = single.FindSample(SampleNo);

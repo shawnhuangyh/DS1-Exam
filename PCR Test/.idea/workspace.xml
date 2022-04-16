@@ -11,8 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="feat: add category query">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="refactor: unify interface">
+      <change beforePath="$PROJECT_DIR$/Test Cases/Checked.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/Checked.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/Queue.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/Queue.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <workItem from="1650076869557" duration="8242000" />
       <workItem from="1650091053712" duration="18081000" />
       <workItem from="1650121676542" duration="773000" />
-      <workItem from="1650123032150" duration="1000" />
+      <workItem from="1650123032150" duration="372000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit for PCR Test">
       <created>1649676965644</created>
@@ -352,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650121457485</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="refactor: unify interface">
+      <created>1650123396428</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1650123396428</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +378,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: change queue to link queue" />
     <MESSAGE value="refactor: move the show queue to PCR class" />
     <MESSAGE value="chore: modify enqueue and dequeue logic" />
     <MESSAGE value="feat: add link list" />
@@ -395,6 +402,7 @@
     <MESSAGE value="chore: add n/a for contact" />
     <MESSAGE value="chore: reformat the code" />
     <MESSAGE value="feat: add category query" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add category query" />
+    <MESSAGE value="refactor: unify interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: unify interface" />
   </component>
 </project>
