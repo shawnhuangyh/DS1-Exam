@@ -237,7 +237,75 @@ void PCRTest::MarkSubClose() {
 }
 
 void PCRTest::CategoryQuery() {
+    cout << "==========分类查询==========" << endl;
+    cout << "阴性：";
+    StateQuery(0);
+    cout << endl << "阳性：";
+    StateQuery(1);
+    cout << endl << "可疑：";
+    StateQuery(2);
+    cout << endl << "密接：";
+    ContactQuery(0);
+    cout << endl << "次密接：";
+    ContactQuery(1);
+    cout << endl << "待上传：";
+    StateQuery(3);
+    cout << endl << "在排队：";
+    StateQuery(4);
+    cout << endl;
+}
 
+void PCRTest::StateQuery(int select) {
+    State state;
+    switch (select) {
+        case 0:
+            state = NEGATIVE;
+            break;
+        case 1:
+            state = POSITIVE;
+            break;
+        case 2:
+            state = SUSPICIOUS;
+            break;
+        case 3:
+            state = PENDING;
+            break;
+        case 4:
+            state = IN_QUEUE;
+            break;
+    }
+    for (int i = 0; i < single.GetRear(); i++) {
+        if (single.GetElem(i).getState() == state) {
+            single.GetElem(i).ShowPerson();
+        }
+    }
+    for (int i = 0; i < mixed.GetRear(); i++) {
+        if (mixed.GetElem(i).getState() == state) {
+            mixed.GetElem(i).ShowPerson();
+        }
+    }
+}
+
+void PCRTest::ContactQuery(int select) {
+    Contact contact;
+    switch (select) {
+        case 0:
+            contact = CONTACT;
+            break;
+        case 1:
+            contact = SUB_CONTACT;
+            break;
+    }
+    for (int i = 0; i < single.GetRear(); i++) {
+        if (single.GetElem(i).getContact() == contact) {
+            single.GetElem(i).ShowPerson();
+        }
+    }
+    for (int i = 0; i < mixed.GetRear(); i++) {
+        if (mixed.GetElem(i).getContact() == contact) {
+            mixed.GetElem(i).ShowPerson();
+        }
+    }
 }
 
 void PCRTest::PersonQuery() {

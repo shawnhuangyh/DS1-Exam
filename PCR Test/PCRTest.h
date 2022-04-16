@@ -64,6 +64,10 @@ public:
     // 按类型查询人员
     void CategoryQuery();
 
+    void StateQuery(int select);
+
+    void ContactQuery(int select);
+
     // 按编号查询人员
     void PersonQuery();
 };

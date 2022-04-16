@@ -11,12 +11,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="chore: randomize test data">
+    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="chore: reformat the code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assistance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assistance.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PCRTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PCRTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,7 @@
       <workItem from="1649987535455" duration="3770000" />
       <workItem from="1650031613097" duration="8392000" />
       <workItem from="1650076869557" duration="8242000" />
-      <workItem from="1650091053712" duration="15419000" />
+      <workItem from="1650091053712" duration="17380000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit for PCR Test">
       <created>1649676965644</created>
@@ -320,7 +318,35 @@
       <option name="project" value="LOCAL" />
       <updated>1650113393803</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="chore: add comments for pcr test">
+      <created>1650117334628</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1650117334629</updated>
+    </task>
+    <task id="LOCAL-00034" summary="chore: add comments for queue">
+      <created>1650117481240</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1650117481240</updated>
+    </task>
+    <task id="LOCAL-00035" summary="chore: add n/a for contact">
+      <created>1650117496247</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1650117496247</updated>
+    </task>
+    <task id="LOCAL-00036" summary="chore: reformat the code">
+      <created>1650117575927</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1650117575927</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,10 +364,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add assistance" />
-    <MESSAGE value="fix: use regular queue to keep the queue data" />
-    <MESSAGE value="fix: fix queue full bug" />
-    <MESSAGE value="chore: add test case data" />
     <MESSAGE value="feat: add menu &amp; import checked data" />
     <MESSAGE value="feat: change queue to link queue" />
     <MESSAGE value="refactor: move the show queue to PCR class" />
@@ -363,6 +385,10 @@
     <MESSAGE value="feat: add find contact" />
     <MESSAGE value="feat: add find sub contact" />
     <MESSAGE value="chore: randomize test data" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: randomize test data" />
+    <MESSAGE value="chore: add comments for pcr test" />
+    <MESSAGE value="chore: add comments for queue" />
+    <MESSAGE value="chore: add n/a for contact" />
+    <MESSAGE value="chore: reformat the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: reformat the code" />
   </component>
 </project>
