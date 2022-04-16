@@ -56,18 +56,18 @@ void PCRTest::EnQueue() {
     string PersonID;
     char type;
     cout << "===========排队===========" << endl;
-    cout << "请输入检测人的人员编号：" << endl;
+    cout << "请输入检测人的人员编号：";
     cin >> PersonID;
     cout << endl << "请选择检测类型" << endl << "0：10人混合检测 ; 1：单人单管检测" << endl << "请输入(0/1)：";
     cin >> type;
     if (type == '0') {
         EnQueue(PersonID, 0);
-        cout << endl << "排队成功！" << endl << endl;
+        cout << "排队成功！" << endl << endl;
     } else if (type == '1') {
         EnQueue(PersonID, 1);
-        cout << endl << "排队成功！" << endl << endl;
+        cout << "排队成功！" << endl << endl;
     } else {
-        cout << endl << "输入错误，请重新输入！" << endl << endl;
+        cout << "输入错误，请重新输入！" << endl << endl;
     }
 }
 
@@ -90,16 +90,16 @@ void PCRTest::DeQueue() {
     char type;
     string temp;
     cout << "===========采样===========" << endl;
-    cout << endl << "请选择检测类型" << endl << "0：10人混合检测 ; 1：单人单管检测" << endl << "请输入(0/1)：";
+    cout << "请选择检测类型" << endl << "0：10人混合检测 ; 1：单人单管检测" << endl << "请输入(0/1)：";
     cin >> type;
     if (type == '0') {
         DeQueue(temp, 0);
-        cout << endl << temp << "混合检测完成！" << endl << endl;
+        cout << temp << "混合检测完成！" << endl << endl;
     } else if (type == '1') {
         DeQueue(temp, 1);
-        cout << endl << temp << "单管检测完成！" << endl << endl;
+        cout << temp << "单管检测完成！" << endl << endl;
     } else {
-        cout << endl << "输入错误，请重新输入！" << endl << endl;
+        cout << "输入错误，请重新输入！" << endl << endl;
     }
 }
 
@@ -252,7 +252,7 @@ void PCRTest::CategoryQuery() {
     StateQuery(3);
     cout << endl << "在排队：";
     StateQuery(4);
-    cout << endl;
+    cout << endl << endl;
 }
 
 void PCRTest::StateQuery(int select) {

@@ -11,11 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="chore: reformat the code">
+    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="feat: add category query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PCRTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PCRTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +89,9 @@
       <workItem from="1649987535455" duration="3770000" />
       <workItem from="1650031613097" duration="8392000" />
       <workItem from="1650076869557" duration="8242000" />
-      <workItem from="1650091053712" duration="17380000" />
+      <workItem from="1650091053712" duration="18081000" />
+      <workItem from="1650121676542" duration="773000" />
+      <workItem from="1650123032150" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit for PCR Test">
       <created>1649676965644</created>
@@ -346,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650117575927</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="feat: add category query">
+      <created>1650121457485</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1650121457485</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +370,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add menu &amp; import checked data" />
     <MESSAGE value="feat: change queue to link queue" />
     <MESSAGE value="refactor: move the show queue to PCR class" />
     <MESSAGE value="chore: modify enqueue and dequeue logic" />
@@ -389,6 +394,7 @@
     <MESSAGE value="chore: add comments for queue" />
     <MESSAGE value="chore: add n/a for contact" />
     <MESSAGE value="chore: reformat the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: reformat the code" />
+    <MESSAGE value="feat: add category query" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add category query" />
   </component>
 </project>
