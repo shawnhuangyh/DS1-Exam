@@ -34,6 +34,8 @@ public:
 
     bool DeQueue(Person &elem);
 
+    bool DeQueue(Person &elem, string sample);
+
     bool IsEmpty() const;
 
     bool IsFull() const;

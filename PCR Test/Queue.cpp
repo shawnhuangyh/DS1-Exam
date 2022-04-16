@@ -65,6 +65,18 @@ bool Queue::DeQueue(Person &elem) {
     }
 }
 
+bool Queue::DeQueue(Person &elem, string sample) {
+    if (IsEmpty()) {
+        cout << "队列为空！" << endl;
+        return false;
+    } else {
+        elems[front].setState(PENDING);
+        elems[front].setSampleID(sample);
+        elem = elems[front++];
+        return true;
+    }
+}
+
 bool Queue::IsEmpty() const {
     return rear == front;
 }

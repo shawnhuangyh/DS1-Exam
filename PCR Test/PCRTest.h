@@ -8,13 +8,18 @@
 #include <fstream>
 #include "Person.h"
 #include "Queue.h"
+#include "LinkList.h"
+#include "Assistance.h"
 
 using namespace std;
 
 class PCRTest {
 private:
-    Queue<Person> mixed, single;
+    Queue mixed, single;
+
     int mixed_count, single_count;
+
+    LinkList<string> close, sub_close;
 
     void EnQueue(const string &elem, int select);
 
@@ -35,8 +40,15 @@ public:
 
     void PerformTest();
 
-    string GetSampleNo(int select);
     // 选择0为混合队列，选择1为单队列
+    string GetSampleNo(int select);
+
+    // 确认输入的混合检测样本序号是否正确
+    bool CheckSampleNo(const string &sample_no);
+
+    //TODO  按类别查询
+
+    void PersonQuery();
 };
 
 
