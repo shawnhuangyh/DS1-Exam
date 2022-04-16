@@ -6,7 +6,6 @@
 #define PCR_TEST_QUEUE_H
 
 #include <iostream>
-#include "Node.h"
 #include "Person.h"
 
 using namespace std;
@@ -40,8 +39,12 @@ public:
 
     void ShowQueue();
 
-    Person FindElem(const string& elem);
+    int FindElem(const string &elem, int pos = 0);
 
+    void SetNegative(int pos);
+
+    // Type=0:混管，Type=1:单管
+    void SetSuspicious(int pos, int type);
 };
 
 

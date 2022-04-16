@@ -6,7 +6,9 @@
 
 Person::Person() {
     PersonID = "Unknown";
-    SampleID = "Pending";
+    SampleID = "Unknown";
+    state = IN_QUEUE;
+    contact = NORMAL;
 }
 
 Person::Person(string pid, string sid) {
@@ -36,5 +38,9 @@ string Person::getPersonNo() {
 
 void Person::setSampleID(string sid) {
     SampleID = sid;
+}
+
+void Person::setState(State s) {
+    state = s;
 }
 

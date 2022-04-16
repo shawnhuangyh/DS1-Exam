@@ -74,17 +74,31 @@ bool Queue::IsFull() const {
 }
 
 void Queue::ShowQueue() {
-    for (int i = front; i < rear; i++) {
+    for (int i = 0; i < rear; i++) {
         cout << elems[i++] << " ";
     }
     cout << endl;
 }
 
-Person Queue::FindElem(const string &elem) {
-    for (int i = 0; i < rear; i++) {
+int Queue::FindElem(const string &elem, int pos) {
+    for (int i = pos; i < rear; i++) {
         if (elems[i].getSampleID() == elem) {
-            return elems[i];
+            return i;
         }
     }
-    return {};
+    return -1;
+}
+
+void Queue::SetNegative(int pos) {
+    elems[pos].setState(NEGATIVE);
+}
+
+void Queue::SetSuspicious(int pos, int type) {
+    if (type == 0) {
+        for (int i = 0; i < 10; i++) {
+            elems[pos + i].setState(SUSPICIOUS);
+        }
+    } else {
+        elems[pos].setState(SUSPICIOUS);
+    }
 }
