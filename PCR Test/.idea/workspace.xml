@@ -11,14 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="feat: set person status">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="fix: fix the bug to modify sample id and state">
       <change beforePath="$PROJECT_DIR$/PCRTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PCRTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Person.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person.h" beforeDir="false" afterPath="$PROJECT_DIR$/Person.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +90,7 @@
       <workItem from="1649987535455" duration="3770000" />
       <workItem from="1650031613097" duration="8392000" />
       <workItem from="1650076869557" duration="8242000" />
-      <workItem from="1650091053712" duration="1000" />
+      <workItem from="1650091053712" duration="1864000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit for PCR Test">
       <created>1649676965644</created>
@@ -273,7 +267,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650089985006</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix: give person default enum">
+      <created>1650091251595</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1650091251595</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fix: fix the bug to modify sample id and state">
+      <created>1650092820506</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1650092820506</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +320,8 @@
     <MESSAGE value="feat: stop using template and add search queue" />
     <MESSAGE value="revert: start using sequence queue" />
     <MESSAGE value="feat: set person status" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: set person status" />
+    <MESSAGE value="fix: give person default enum" />
+    <MESSAGE value="fix: fix the bug to modify sample id and state" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix the bug to modify sample id and state" />
   </component>
 </project>

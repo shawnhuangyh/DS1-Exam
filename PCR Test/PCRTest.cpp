@@ -174,21 +174,36 @@ void PCRTest::PersonQuery() {
     cout << "请输入个人编号：" << endl;
     cin >> id;
     State state;
-    string sample;
+    string sample, status;
     Person temp;
     int index = mixed.FindPerson(id);
     if (index != -1) {
         temp = mixed.GetElem(index);
         state = temp.getState();
         sample = temp.getSampleID();
-        cout << endl << "个人编号：" << id << endl << "样本编号：" << sample << endl << "结果是：" << state << endl;
     } else {
         index = single.FindPerson(id);
         if (index != -1) {
             temp = single.GetElem(index);
             state = temp.getState();
             sample = temp.getSampleID();
-            cout << endl << "个人编号：" << id << endl << "样本编号：" << sample << endl << "结果是：" << state << endl;
+        } else {
+            sample = "Unknown";
+            state = NOT_IN_QUEUE;
         }
     }
+    if (state == NEGATIVE) {
+        status = "阴性";
+    } else if (state == POSITIVE) {
+        status = "阳性";
+    } else if (state == SUSPICIOUS) {
+        status = "可疑";
+    } else if (state == PENDING) {
+        status = "待上传";
+    } else if (state == IN_QUEUE) {
+        status = "在排队";
+    } else {
+        status = "未检测";
+    }
+    cout << endl << "个人编号：" << id << endl << "样本编号：" << sample << endl << "结果是：" << status << endl;
 }
