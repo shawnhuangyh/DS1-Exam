@@ -46,10 +46,16 @@ public:
 
     int FindPerson(const string &elem);
 
-    void SetNegative(int pos);
+    // Type=0:混管，Type=1:单管
+    void SetNegative(int pos, int type);
 
     // Type=0:混管，Type=1:单管
+    // 设置单管可疑或混管阳性
     void SetSuspicious(int pos, int type);
+
+    void SetPositive(int pos);
+
+    void SetContact(int pos);
 
     Person GetElem(int pos);
 };

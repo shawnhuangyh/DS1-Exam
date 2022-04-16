@@ -126,7 +126,7 @@ void PCRTest::PerformTest() {
             switch (result) {
                 case 0:
                     temp = mixed.FindSample(SampleNo);
-                    mixed.SetNegative(temp);
+                    mixed.SetNegative(temp, 0);
                     break;
                 case 1:
                 case 2:
@@ -142,7 +142,25 @@ void PCRTest::PerformTest() {
             return;
         }
     } else {
-        //TODO 单管检测
+        cout << endl << "请输入结果" << endl << "0：阴性 ; 1：阳性 ; 2：可疑" << endl << "请输入(0-2)：";
+        cin >> result;
+        switch (result) {
+            case 0:
+                temp = single.FindSample(SampleNo);
+                single.SetNegative(temp, 1);
+                break;
+            case 1:
+                temp = single.FindSample(SampleNo);
+                single.SetPositive(temp);
+                break;
+            case 2:
+                temp = single.FindSample(SampleNo);
+                single.SetSuspicious(temp, 1);
+                break;
+            default:
+                cout << endl << "输入错误，请重新输入！" << endl << endl;
+                break;
+        }
     }
 }
 
@@ -171,7 +189,7 @@ bool PCRTest::CheckSampleNo(const string &sample_no) {
 void PCRTest::PersonQuery() {
     cout << "==========个人查询==========" << endl;
     string id;
-    cout << "请输入个人编号：" << endl;
+    cout << "请输入个人编号：";
     cin >> id;
     State state;
     string sample, status;
@@ -205,5 +223,5 @@ void PCRTest::PersonQuery() {
     } else {
         status = "未检测";
     }
-    cout << endl << "个人编号：" << id << endl << "样本编号：" << sample << endl << "结果是：" << status << endl;
+    cout << "个人编号：" << id << endl << "样本编号：" << sample << endl << "结果是：" << status << endl << endl;
 }

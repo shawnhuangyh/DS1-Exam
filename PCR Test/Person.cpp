@@ -50,8 +50,16 @@ void Person::setState(State s) {
     state = s;
 }
 
+void Person::setContact(Contact c) {
+    contact = c;
+}
+
 State Person::getState() {
     return state;
+}
+
+Contact Person::getContact() {
+    return contact;
 }
 
 

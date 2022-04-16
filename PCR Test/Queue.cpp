@@ -110,8 +110,14 @@ int Queue::FindPerson(const string &elem) {
     return -1;
 }
 
-void Queue::SetNegative(int pos) {
-    elems[pos].setState(NEGATIVE);
+void Queue::SetNegative(int pos, int type) {
+    if (type == 0) {
+        for (int i = 0; i < 10; i++) {
+            elems[pos + i].setState(NEGATIVE);
+        }
+    } else {
+        elems[pos].setState(NEGATIVE);
+    }
 }
 
 void Queue::SetSuspicious(int pos, int type) {
@@ -122,6 +128,14 @@ void Queue::SetSuspicious(int pos, int type) {
     } else {
         elems[pos].setState(SUSPICIOUS);
     }
+}
+
+void Queue::SetPositive(int pos) {
+    elems[pos].setState(POSITIVE);
+}
+
+void Queue::SetContact(int pos) {
+    elems[pos].setContact(CONTACT);
 }
 
 Person Queue::GetElem(int pos) {

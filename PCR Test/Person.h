@@ -38,9 +38,11 @@ public:
 
     void setState(State s);
 
+    void setContact(Contact c);
+
     State getState();
 
-
+    Contact getContact();
 };
 
 

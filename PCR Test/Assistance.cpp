@@ -13,7 +13,7 @@ void ShowMenu() {
     cout << "5. 各类人员查询" << endl;
     cout << "6. 个人查询" << endl;
     cout << "0. 退出系统" << endl;
-    cout << "请选择(0-6)：" << endl;
+    cout << "请选择(0-6)：";
 }
 
 
