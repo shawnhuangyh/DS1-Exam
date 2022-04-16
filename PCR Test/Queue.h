@@ -38,8 +38,6 @@ public:
 
     bool IsFull() const;
 
-    bool IsFull();
-
     void ShowQueue();
 
     Person FindElem(const string& elem);
