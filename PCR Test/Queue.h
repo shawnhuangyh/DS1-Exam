@@ -58,6 +58,8 @@ public:
     void SetContact(int pos);
 
     Person GetElem(int pos);
+
+    int GetRear();
 };
 
 

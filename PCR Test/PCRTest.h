@@ -19,7 +19,7 @@ private:
 
     int mixed_count, single_count;
 
-    LinkList<string> close, sub_close;
+    LinkList<string> sub_close;
 
     void EnQueue(const string &elem, int select);
 
@@ -45,6 +45,8 @@ public:
 
     // 确认输入的混合检测样本序号是否正确
     bool CheckSampleNo(const string &sample_no);
+
+    void MarkClose(int pos);
 
     //TODO  按类别查询
 

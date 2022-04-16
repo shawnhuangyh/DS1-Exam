@@ -152,6 +152,8 @@ void PCRTest::PerformTest() {
             case 1:
                 temp = single.FindSample(SampleNo);
                 single.SetPositive(temp);
+                MarkClose(temp);
+                //TODO 寻找次密接
                 break;
             case 2:
                 temp = single.FindSample(SampleNo);
@@ -186,25 +188,57 @@ bool PCRTest::CheckSampleNo(const string &sample_no) {
     }
 }
 
+void PCRTest::MarkClose(int pos) {
+    // 寻找同一栋楼的 将其全部设置为密接
+    string building = single.GetElem(pos).getBuildingNo();
+    Person temp;
+    // 在单管队列中寻找同一栋楼的
+    for (int i = 0; i < single.GetRear(); i++) {
+        temp = single.GetElem(i);
+        if (temp.getBuildingNo() == building) {
+            single.SetContact(i);
+        }
+    }
+    // 在混管队列中寻找同一栋楼的
+    for (int i = 0; i < mixed.GetRear(); i++) {
+        temp = mixed.GetElem(i);
+        if (temp.getBuildingNo() == building) {
+            mixed.SetContact(i);
+        }
+    }
+    // 队伍前面10人及后面的所有人设置为密接
+    for (int i = pos - 10; i < single.GetRear(); i++) {
+        if (i >= 0 && i != pos) {
+            temp = single.GetElem(i);
+            single.SetContact(i);
+            building = single.GetElem(i).getBuildingNo();
+            sub_close.Insert(building);
+        }
+    }
+}
+
 void PCRTest::PersonQuery() {
     cout << "==========个人查询==========" << endl;
     string id;
     cout << "请输入个人编号：";
     cin >> id;
-    State state;
-    string sample, status;
+    State state = NEGATIVE;
+    Contact contact = NORMAL;
+    string sample, status, contact_status;
     Person temp;
     int index = mixed.FindPerson(id);
     if (index != -1) {
         temp = mixed.GetElem(index);
         state = temp.getState();
         sample = temp.getSampleID();
+        contact = temp.getContact();
     } else {
         index = single.FindPerson(id);
         if (index != -1) {
             temp = single.GetElem(index);
             state = temp.getState();
             sample = temp.getSampleID();
+            contact = temp.getContact();
         } else {
             sample = "Unknown";
             state = NOT_IN_QUEUE;
@@ -223,5 +257,15 @@ void PCRTest::PersonQuery() {
     } else {
         status = "未检测";
     }
-    cout << "个人编号：" << id << endl << "样本编号：" << sample << endl << "结果是：" << status << endl << endl;
+    if (contact == CONTACT) {
+        contact_status = "密接";
+    } else if (contact == SUB_CONTACT) {
+        contact_status = "次密接";
+    } else if (contact == NORMAL && state != POSITIVE && state != SUSPICIOUS) {
+        contact_status = "正常";
+    } else {
+        contact_status = "确诊/可疑";
+    }
+    cout << "个人编号：" << id << endl << "样本编号：" << sample << endl << "核酸检测结果：" << status
+         << endl << "密接结果：" << contact_status << endl;
 }

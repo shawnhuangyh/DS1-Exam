@@ -141,3 +141,7 @@ void Queue::SetContact(int pos) {
 Person Queue::GetElem(int pos) {
     return elems[pos];
 }
+
+int Queue::GetRear() {
+    return rear;
+}
