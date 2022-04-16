@@ -6,53 +6,46 @@
 
 
 Queue::Queue() {
-    front = rear = maxsize = 0;
-    elems = nullptr;
-}
-
-Queue::Queue(int max) {
-    front = rear = 0;
-    maxsize = max;
-    elems = new Person[maxsize];
+    head = front = rear = new Node<Person>;
 }
 
 Queue::Queue(const Queue &copy) {
-    front = copy.front;
-    rear = copy.rear;
-    maxsize = copy.maxsize;
-    elems = new Person[maxsize];
-    for (int i = 0; i < maxsize; i++) {
-        elems[i] = copy.elems[i];
+    head = front = rear = new Node<Person>;
+    for (Node<Person> *i = copy.head; i != nullptr; i = i->next) {
+        EnQueue(i->data);
     }
 }
 
 Queue &Queue::operator=(const Queue &copy) {
     if (this != &copy) {
-        delete[] elems;
-        front = copy.front;
-        rear = copy.rear;
-        maxsize = copy.maxsize;
-        elems = new Person[maxsize];
-        for (int i = 0; i < maxsize; i++) {
-            elems[i] = copy.elems[i];
+        Clear();
+        for (Node<Person> *i = copy.head; i != nullptr; i = i->next) {
+            EnQueue(i->data);
         }
     }
     return *this;
 }
 
 Queue::~Queue() {
-    delete[] elems;
-    front = rear = maxsize = 0;
+    Clear();
+    delete head;
+    head = front = rear = nullptr;
+}
+
+void Queue::Clear() {
+    Node<Person> *p = head->next;
+    while (p != nullptr) {
+        Node<Person> *temp = p;
+        p = p->next;
+        delete temp;
+    }
 }
 
 bool Queue::EnQueue(Person elem) {
-    if (IsFull()) {
-        cout << "队列已满！" << endl;
-        return false;
-    } else {
-        elems[rear++] = elem;
-        return true;
-    }
+    auto *newNode = new Node<Person>(elem, nullptr);
+    rear->next = newNode;
+    rear = newNode;
+    return true;
 }
 
 bool Queue::DeQueue(Person &elem) {
@@ -60,31 +53,27 @@ bool Queue::DeQueue(Person &elem) {
         cout << "Queue is empty" << endl;
         return false;
     } else {
-        elem = elems[front++];
+        elem = front->next->data;
+        front = front->next;
         return true;
     }
 }
 
-bool Queue::IsEmpty() const {
-    return rear == front;
-}
-
-bool Queue::IsFull() const {
-    return rear == maxsize;
+bool Queue::IsEmpty() {
+    return head->next == nullptr;
 }
 
 void Queue::ShowQueue() {
-    for (int i = front; i < rear; i++) {
-        cout << elems[i++] << " ";
+    for (Node<Person> *p = front->next; p != nullptr; p = p->next) {
+        cout << p->data << " ";
     }
     cout << endl;
 }
 
-Person Queue::FindElem(const string& elem) {
-    for (int i = 0; i < rear; i++) {
-        if (elems[i].getSampleID() == elem) {
-            return elems[i];
+Person Queue::FindElem(string elem) {
+    for (Node<Person> *p = front->next; p != nullptr; p = p->next) {
+        if (p->data.getSampleID() == elem) {
+            return p->data;
         }
     }
-    return {};
 }
