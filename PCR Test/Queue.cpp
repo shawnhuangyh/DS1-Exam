@@ -132,10 +132,12 @@ void Queue::SetSuspicious(int pos, int type) {
 
 void Queue::SetPositive(int pos) {
     elems[pos].setState(POSITIVE);
+    elems[pos].setContact(NOT_AVAILABLE);
 }
 
 void Queue::SetContact(int pos) {
-    elems[pos].setContact(CONTACT);
+    if (elems[pos].getContact() == NORMAL)
+        elems[pos].setContact(CONTACT);
 }
 
 void Queue::SetSubContact(int pos) {
