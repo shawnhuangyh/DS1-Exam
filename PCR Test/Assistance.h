@@ -13,7 +13,7 @@ using namespace std;
 
 enum Contact{CONTACT, SUB_CONTACT, NORMAL};
 
-enum State{Negative, Positive, Suspicious, Pending, InQueue, NotInQueue};
+enum State{NEGATIVE, POSITIVE, SUSPICIOUS, PENDING, IN_QUEUE, NOT_IN_QUEUE};
 
 void ShowMenu();
 
