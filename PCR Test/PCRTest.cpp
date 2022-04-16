@@ -236,6 +236,10 @@ void PCRTest::MarkSubClose() {
     }
 }
 
+void PCRTest::CategoryQuery() {
+
+}
+
 void PCRTest::PersonQuery() {
     cout << "==========个人查询==========" << endl;
     string id;
@@ -280,10 +284,10 @@ void PCRTest::PersonQuery() {
         contact_status = "密接";
     } else if (contact == SUB_CONTACT) {
         contact_status = "次密接";
-    } else if (contact == NORMAL && state != POSITIVE && state != SUSPICIOUS) {
+    } else if (contact == NORMAL) {
         contact_status = "正常";
     } else {
-        contact_status = "确诊/可疑";
+        contact_status = "N/A";
     }
     cout << "个人编号：" << id << endl << "样本编号：" << sample << endl << "核酸检测结果：" << status
          << endl << "密接结果：" << contact_status << endl;
