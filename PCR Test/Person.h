@@ -20,7 +20,7 @@ private:
 public:
     Person();
 
-    Person(string pid, string sid = "Pending");
+    Person(string pid, string sid = "Unknown");
 
     string getPersonID();
 
@@ -32,14 +32,14 @@ public:
 
     string getPersonNo();
 
+    void ShowPerson();
+
     void setSampleID(string sid);
 
     void setState(State s);
 
-    friend ostream &operator<<(ostream &out, const Person &p) {
-        out << p.PersonID;
-        return out;
-    }
+    State getState();
+
 
 };
 

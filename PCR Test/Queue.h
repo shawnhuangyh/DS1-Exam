@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "Person.h"
+#include "Assistance.h"
 
 using namespace std;
 
@@ -39,12 +40,16 @@ public:
 
     void ShowQueue();
 
-    int FindElem(const string &elem, int pos = 0);
+    int FindSample(const string &elem, int pos = 0);
+
+    int FindPerson(const string &elem);
 
     void SetNegative(int pos);
 
     // Type=0:混管，Type=1:单管
     void SetSuspicious(int pos, int type);
+
+    Person GetElem(int pos);
 };
 
 

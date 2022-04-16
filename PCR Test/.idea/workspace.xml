@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="revert: start using sequence queue">
+    <list default="true" id="729a9f99-06e1-4c16-83df-d20787ea837a" name="Changes" comment="feat: set person status">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PCRTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PCRTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/PCRTest.h" afterDir="false" />
@@ -19,7 +19,6 @@
       <change beforePath="$PROJECT_DIR$/Person.h" beforeDir="false" afterPath="$PROJECT_DIR$/Person.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Cases/Checked.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/Checked.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,11 +81,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,7 +95,8 @@
       <workItem from="1649987390924" duration="136000" />
       <workItem from="1649987535455" duration="3770000" />
       <workItem from="1650031613097" duration="8392000" />
-      <workItem from="1650076869557" duration="6571000" />
+      <workItem from="1650076869557" duration="8242000" />
+      <workItem from="1650091053712" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit for PCR Test">
       <created>1649676965644</created>
@@ -271,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650079643020</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="feat: set person status">
+      <created>1650089985006</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1650089985006</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +311,7 @@
     <MESSAGE value="fix: fix link list bug" />
     <MESSAGE value="feat: stop using template and add search queue" />
     <MESSAGE value="revert: start using sequence queue" />
-    <option name="LAST_COMMIT_MESSAGE" value="revert: start using sequence queue" />
+    <MESSAGE value="feat: set person status" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: set person status" />
   </component>
 </project>
