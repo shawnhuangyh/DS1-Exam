@@ -144,11 +144,13 @@ void PCRTest::PerformTest() {
             cout << endl;
             switch (result) {
                 case 0:
+                    // 混管检测阴性
                     temp = mixed.FindSample(SampleNo);
                     mixed.SetNegative(temp, 0);
                     break;
                 case 1:
                 case 2:
+                    // 混管检测阳性、可疑，其结果都是将样本的状态设置为可疑，所以合并处理
                     temp = mixed.FindSample(SampleNo);
                     mixed.SetSuspicious(temp, 0);
                     break;
@@ -157,6 +159,7 @@ void PCRTest::PerformTest() {
                     break;
             }
         } else {
+            // 如果样本不到10人（队伍空了除外），不允许进行混管检测
             cout << "当前试管还没有到10人，请混检到10人后再进行检测！" << endl;
             return;
         }
@@ -166,16 +169,22 @@ void PCRTest::PerformTest() {
         cout << endl;
         switch (result) {
             case 0:
+                // 单管设置阴性
                 temp = single.FindSample(SampleNo);
                 single.SetNegative(temp, 1);
                 break;
             case 1:
+                // 单管设置阳性
                 temp = single.FindSample(SampleNo);
+                // 设置该检测者阳性
                 single.SetPositive(temp);
+                // 标记密接
                 MarkClose(temp);
+                // 标记次密接
                 MarkSubClose();
                 break;
             case 2:
+                // 单管设置可疑
                 temp = single.FindSample(SampleNo);
                 single.SetSuspicious(temp, 1);
                 break;
@@ -337,24 +346,30 @@ void PCRTest::PersonQuery() {
     Contact contact = NORMAL;
     string sample, status, contact_status;
     Person temp;
+    // 先在混检队伍中寻找人员编号
     int index = mixed.FindPerson(id);
     if (index != -1) {
+        // 其在混合检测队伍中找到了，将他的信息提取出来
         temp = mixed.GetElem(index);
         state = temp.getState();
         sample = temp.getSampleID();
         contact = temp.getContact();
     } else {
+        // 在单管队伍中寻找人员编号
         index = single.FindPerson(id);
         if (index != -1) {
+            // 其在混合检测队伍中找到了，将他的信息提取出来
             temp = single.GetElem(index);
             state = temp.getState();
             sample = temp.getSampleID();
             contact = temp.getContact();
         } else {
+            // 没有找到，其状态设置为未参加
             sample = "Unknown";
             state = NOT_IN_QUEUE;
         }
     }
+    // 将枚举状态转换为字符串，便于展示
     if (state == NEGATIVE) {
         status = "阴性";
     } else if (state == POSITIVE) {
@@ -377,6 +392,7 @@ void PCRTest::PersonQuery() {
     } else {
         contact_status = "N/A";
     }
+    // 输出信息
     cout << "个人编号：" << id << endl << "样本编号：" << sample << endl << "核酸检测结果：" << status
          << endl << "密接结果：" << contact_status << endl << endl;
 }
