@@ -70,7 +70,9 @@ bool Queue::DeQueue(Person &elem, string sample) {
         cout << "队列为空！" << endl;
         return false;
     } else {
+        // 修改状态为等待上传结果
         elems[front].setState(PENDING);
+        // 修改样本编号
         elems[front].setSampleID(sample);
         elem = elems[front++];
         return true;

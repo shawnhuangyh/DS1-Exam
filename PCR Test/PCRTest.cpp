@@ -9,15 +9,19 @@ PCRTest::PCRTest() : mixed_count(0), single_count(0), mixed(10000), single(10000
 void PCRTest::ImportQueueData() {
     int n, m;
     ifstream infile;
+    // 打开文件
     infile.open("Test Cases/Queue.txt");
+    // 输入混管和单管检测的人数
     infile >> n >> m;
     for (int i = 0; i < n; ++i) {
         string x;
+        // 读取文件的字符串，将其入混管的队列
         infile >> x;
         EnQueue(x, 0);
     }
     for (int i = 0; i < m; ++i) {
         string x;
+        // 读取文件的字符串，将其入单管的队列
         infile >> x;
         EnQueue(x, 1);
     }
@@ -27,14 +31,18 @@ void PCRTest::ImportQueueData() {
 void PCRTest::ImportCheckedData() {
     int n, m;
     ifstream infile;
+    // 打开文件
     infile.open("Test Cases/Checked.txt");
+    // 读取已经完成混管和单管检测的人数
     infile >> n >> m;
     for (int i = 0; i < n; ++i) {
         string temp;
+        // 将已经完成混管检测的人出混管队列
         DeQueue(temp, 0);
     }
     for (int i = 0; i < m; ++i) {
         string temp;
+        // 将已经完成单管检测的人出混管队列
         DeQueue(temp, 1);
     }
     infile.close();
@@ -42,12 +50,18 @@ void PCRTest::ImportCheckedData() {
 
 void PCRTest::EnQueue(const string &elem, int select) {
     if (select == 0) {
+        // 从字符串构造对象
         Person temp(elem);
+        // 将对象插入队列
         mixed.EnQueue(temp);
+        // 设置该检测者的状态为在队列中
         temp.setState(IN_QUEUE);
     } else {
+        // 从字符串构造对象
         Person temp(elem);
+        // 将对象插入队列
         single.EnQueue(temp);
+        // 设置该检测者的状态为在队列中
         temp.setState(IN_QUEUE);
     }
 }
@@ -74,12 +88,16 @@ void PCRTest::EnQueue() {
 void PCRTest::DeQueue(string &elem, int select) {
     Person temp;
     if (select == 0) {
+        // 获取当前元素的样本编号
         string sample = GetSampleNo(0);
+        // 将队列头的元素的样本编号修改，并出队
         mixed.DeQueue(temp, sample);
         elem = temp.getPersonID();
         mixed_count++;
     } else {
+        // 获取当前元素的样本编号
         string sample = GetSampleNo(1);
+        // 将队列头的元素的样本编号修改，并出队
         single.DeQueue(temp, sample);
         elem = temp.getPersonID();
         single_count++;
